@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class EsService {
 
-    public static List<Product> findEsData(String keyword) throws Exception {
+    public List<Product> findEsData(String keyword) throws Exception {
         String urlStr = "https://search.jd.com/Search?keyword=" + keyword;
         URL url = new URL(urlStr);
         Document document = Jsoup.parse(url, 30000);
