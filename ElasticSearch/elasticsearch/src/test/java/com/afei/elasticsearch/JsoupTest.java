@@ -33,4 +33,15 @@ public class JsoupTest {
         });
 
     }
+
+    @Test
+    void test1() throws Exception {
+        String urlStr = "http://10.200.33.184/cloudResourceMgt/aliyunMgt";
+        URL url = new URL(urlStr);
+        Document document = Jsoup.parse(url, 30000);
+
+        String text = document.getElementsByClass("custom-antd-table").text();
+        System.out.println("=================" + text);
+
+    }
 }
